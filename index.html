@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,18 +48,22 @@
       </div>
 
       <div class="d-flex justify-content-center text-center">
-        <div class="col-md-9 mx-auto">
+        <div class="col-md-8 mx-auto">
           <div class="form-outline w-100">
             <input
               type="search"
               placeholder="Type a city"
               class="form-control"
+              id="search-bar"
             />
           </div>
         </div>
-        <div class="col-md-3 mx-auto">
+        <div class="col-md-4 mx-auto">
           <button type="button" class="btn btn-primary" id="search-button">
             <span>Search</span>
+          </button>
+          <button type="button" class="btn btn-primary" id="current-button">
+            <span>Current</span>
           </button>
         </div>
       </div>
@@ -66,18 +71,20 @@
         <div class="row justify-content-center">
           <div class="col-4 mx-auto my-auto">
             <div class="city">
-              <h1>London</h1>
-              <h4>Sunday</h4>
-              <h4>4pm</h4>
+              <h1 id="city-name">Paris</h1>
+              <h4 id="day">Sunday</h4>
+              <h4 id="time">4pm</h4>
             </div>
           </div>
           <div class="col-4 mx-auto my-auto">
             <div class="currently">
               <ul style="list-style-type: none">
-                <li>Current Temp 17°C</li>
-                <li>Precipitation 42%</li>
-                <li>High Temp 18°C</li>
-                <li>Low Temp 8°C</li>
+                <li>
+                  <span>Current Temp:</span> <span id="tempNow">17</span>°C
+                </li>
+                <li><span>Humidity:</span> <span id="humidity">42</span>%</li>
+                <li><span>High Temp:</span> <span id="high">18</span>°C</li>
+                <li><span>Low Temp:</span> <span id="low">8</span>°C</li>
               </ul>
             </div>
           </div>

@@ -46,3 +46,8 @@
 .city {
   font-family: "Raleway", sans-serif;
 }
+
+#current-button {
+  background-color: green;
+  border-color: green;
+}
