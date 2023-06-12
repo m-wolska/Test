@@ -18,19 +18,17 @@ function updateDay() {
 }
 
 function updateTime() {
-  let currentTime = document.querySelector("#time");
   if (now.getHours() < 10) {
     var getHours = `0${now.getHours()}`;
   } else {
-    getHours = `${now.getHours()}`;
+    var getHours = `${now.getHours()}`;
   }
   if (now.getMinutes() < 10) {
     var getMinutes = `0${now.getMinutes()}`;
   } else {
-    getMinutes = now.getMinutes();
+    var getMinutes = now.getMinutes();
   }
-  let time = `${getHours}:${getMinutes}`;
-  currentTime.innerHTML = time;
+  document.querySelector("#time").innerHTML = `${getHours}:${getMinutes}`;
 }
 updateTime();
 updateDay();
